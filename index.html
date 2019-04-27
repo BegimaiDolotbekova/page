@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-
+     
     <title>Function!</title>
   </head>
   <body>
@@ -58,24 +58,25 @@
           </div>
 
     </div>
-    <br>
+    <br><br>
 
 
 <!--  -->
 
      <div class="container">
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Комнат в квартире</div>
-         <div class="col-md-9 mood">
-            <a class="input" href="">Студия</a>
-            <a class="number" href="">1</a>
-            <a class="number" href="">2</a>
-            <a class="number" href="">3</a>
-            <a class="number" href="">4</a>
-            <a class="number" href="">5</a>
-            <a class="number" href="">6</a>
-            <a class="number" href="">7</a>
-            <a class="input" href="">более</a>
+         <div class="col-md-2 fonts">Комнат в квартире</div>
+         <div class="col-md-10 mood">
+            <div id="q" class="inpu" >Студия</div>
+            <div id="w" class="number" >1</div>
+            <div id="e" class="number" >2</div>
+            <div id="r" class="number" >3</div>
+            <div id="t" class="number" >4</div>
+            <div id="y" class="number" >5</div>
+            <div id="u" class="number" >6</div>
+            <div id="i" class="number" >7</div>
+            <div id="o" class="inpu" >более</div>
+
          </div>
          
        </div><br><br>
@@ -128,54 +129,54 @@
      </div><br>
 
      <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Санузел</div>
+         <div class="col-md-2 fonts">Санузел</div>
          <div class="col-md-2 mood">
-            <a class="input" href="">Раздельный</a>
+            <div id="a" class="inpu" >Раздельный</div>
           </div>  
           <div class="col-md-8 mood">
-            <a class="input" href="">Совмещенный</a>
+            <div id="s" class="inpu" >Совмещенный</div>
           </div>
        </div><br><br>
 
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Балкон</div>
+         <div class="col-md-2 fonts">Балкон</div>
          <div class="col-md-10 mood">
-            <a class="input" href="">Балкон</a>
-            <a class="input" href="">Лоджия</a>
-            <a class="input" href="">Нет</a>
+            <div id="d" class="inpu" >Балкон</div>
+            <div id="f" class="inpu" >Лоджия</div>
+            <div id="g" class="inpu" >Нет</div>
          </div>
        </div><br><br>
 
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Отопление</div>
+         <div class="col-md-2 fonts">Отопление</div>
          <div class="col-md-10 mood">
-            <a class="input" href="">Центральное</a>
-            <a class="input" href="">Район</a>
-            <a class="input" href="">Свое</a>
+            <div id="h" class="inpu" >Центральное</div>
+            <div id="j" class="inpu" >Район</div>
+            <div id="k" class="inpu" >Свое</div>
        </div>
        </div><br><br>
 
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Газ</div>
+         <div class="col-md-2 fonts" >Газ</div>
          <div class="col-md-10 mood">
-            <a class="input" href="">Есть</a>
-            <a class="input" href="">Нет</a>
+            <div id="l" class="inpu" >Есть</div>
+            <div id="z" class="inpu" >Нет</div>
         </div>
        </div><br><br>
 
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Канализация</div>
+         <div class="col-md-2 fonts">Канализация</div>
          <div class="col-md-10 mood">
-            <a class="input" href="">Центральное</a>
-            <a class="input" href="">Своя</a>
+          <div id="x" class="inpu" >Центральное</div>
+          <div id="c" class="inpu" >Своя</div>
         </div>
        </div><br><br>
 
        <div class="row">
-         <div class="col-md-2" style="font-size: 17px;">Горячая вода</div>
+         <div class="col-md-2 fonts">Горячая вода</div>
          <div class="col-md-10 mood">
-            <a class="input" href="">Есть</a>
-            <a class="input" href="">Нет</a>
+          <div id="v" class="inpu" >Есть</div>
+          <div id="b" class="inpu" >Нет</div>
         </div>
        </div><br><br>
 
@@ -186,11 +187,17 @@
     
     <div class="row">
       <div class="col-md-9">
-        <div class="block big">
-          <i class="far fa-images pic"></i><br>
-          <a href="" class="fail">Выбрать файлы на компьютере</a><br>
-          <p style="padding-top: 20px;">Перетащите сюда файлы или выберите на компьютера</p>
-      </div><br>
+      <div id="drop-area" class="big">
+  <form class="my-form">
+    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+    <label class=" fail" for="fileElem">Выбрать файлы на компьютере</label>
+
+          <p style="padding-top: 20px;">Перетащите сюда файлы или выберите на компьютере</p>
+  </form>
+  <progress id="progress-bar" max=100 value=0></progress>
+  <div class="block" id="gallery" /></div>
+</div>
+      <br>
       <div class="row">
         <div class="col-md-3" style="font-size: 17px;">Цена</div>
         <div class="col-md-2">
@@ -201,14 +208,15 @@
               <div id="dddd" class="wrapper-dropdown-1" tabindex="1">
                   <p><i class="fas fa-dollar-sign"></i>  &#x2022; &#x2022; &#x2022;</p>
                   <ul class="dropdo">
-                      <li><a href="#">рубль</i></a></li>
                       <li><a href="#">сом</i></a></li>
                       <li><a href="#">доллар</i></a></li>
+                      <li><a href="#">договорная</i></a></li>
                   </ul>
               </div>
             ​</div>
         </div>
-        <div class="col-md-3 mood" style="margin-top: 9px;"><a class="input" href="">Торг возможен</a></div>
+        <div class="col-md-3 mood">
+          <div id="n" class="inpu" >Торг возможен</div></div>
       </div><hr><br>
       <div class="row op">
       <h4><a href="">Войти</a></h4>
@@ -216,8 +224,8 @@
       </div>
       </div>
       <div class="col-md-3">
-        <div class="block small"><i class="far fa-images pict"></i></div><br>
-        <div class="block small"><i class="far fa-images pict"></i></div><br>
+        <div class="block small" id="gallery"><i class="far fa-images pict"></i></div><br>
+        <div class="block small" id="gallery"><i class="far fa-images pict"></i></div><br>
         <div class="block small"><i class="far fa-images pict"></i></div><br>
         <div class="block small"><i class="fas fa-plus pict"></i></div>
       </div>
@@ -226,7 +234,29 @@
   </div>
 
 
+<!-- Api -->
 
+<!-- <div class="map">
+      <div class="map__mask">
+      </div>
+      <div class="map__wrap" id="map">
+      </div>
+      <div class="marker-content js-marker-content">
+        <div class="marker-info"><span class="marker-info__bg-wrap"><span class="marker-info__bg"></span></span>
+          <div class="marker-info__arrow">
+          </div>
+          <div class="marker-info__dash-wrap">
+            <div class="marker-info__rb-dash js-parallax-img">
+            </div>
+          </div>
+          <div class="marker-info__text">Tutmee Agency<br>Петровская ул., 51,<br>Таганрог, Ростовская обл.
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+<!-- end -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -234,203 +264,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
     
+    <!-- My JS -->
+    <script src="script.js"></script>
 
-
-    <script type="text/javascript">
-      
-      function DropDown(el) {
-        this.dd = el;
-        this.placeholder = this.dd.children('p');
-        this.opts = this.dd.find('ul.dropdown > li');
-        this.val = '';
-        this.index = 1000;
-        this.initEvents();
-      }
-      DropDown.prototype = {
-        initEvents : function() {
-          var obj = this;
-
-          obj.dd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function() {
-          return this.val;
-        },
-        getIndex : function() {
-          return this.index;
-        }
-      }
-
-      $(function() {
-
-        var dd = new DropDown( $('#dd') );
-
-        $(document).click(function() {
-          // all dropdowns
-          $('.wrapper-dropdown-3').removeClass('active');
-        });
-
-      });
-
-    </script>
-
-
-    <script type="text/javascript">
-      
-      function DropDow(ele) {
-        this.ddd = ele;
-        this.placeholder = this.ddd.children('p');
-        this.opts = this.ddd.find('ul.dropdow > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
-      }
-      DropDow.prototype = {
-        initEvents : function() {
-          var obj = this;
-
-          obj.ddd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function() {
-          return this.val;
-        },
-        getIndex : function() {
-          return this.index;
-        }
-      }
-
-      $(function() {
-
-        var ddd = new DropDow( $('#ddd') );
-
-        $(document).click(function() {
-          // all dropdowns
-          $('.wrapper-dropdown-2').removeClass('active');
-        });
-
-      });
-
-    </script>
-
-    <script type="text/javascript">
-      
-      function DropDo(ell) {
-        this.dddd = ell;
-        this.placeholder = this.dddd.children('p');
-        this.opts = this.dddd.find('ul.dropdo > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
-      }
-      DropDo.prototype = {
-        initEvents : function() {
-          var obj = this;
-
-          obj.dddd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function() {
-          return this.val;
-        },
-        getIndex : function() {
-          return this.index;
-        }
-      }
-
-      $(function() {
-
-        var dddd = new DropDo( $('#dddd') );
-
-        $(document).click(function() {
-          // all dropdowns
-          $('.wrapper-dropdown-1').removeClass('active');
-        });
-
-      });
-
-    </script>
-
-
-    <script type="text/javascript">
-      
-      function Dropd(e) {
-        this.n = e;
-        this.placeholder = this.n.children('p');
-        this.opts = this.n.find('ul.dropd > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
-      }
-      Dropd.prototype = {
-        initEvents : function() {
-          var obj = this;
-
-          obj.n.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function() {
-          return this.val;
-        },
-        getIndex : function() {
-          return this.index;
-        }
-      }
-
-      $(function() {
-
-        var n = new Dropd( $('#n') );
-
-        $(document).click(function() {
-          // all dropdowns
-          $('.wrapper-dropdown-0').removeClass('active');
-        });
-
-      });
-
-    </script>
-
-<script>
-     
-    </script>
-    
+    <!-- API Key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAic6sNaBOxEd9WYtCD772pwEMNdRTPWc"></script>
   </body>
 </html>
