@@ -1,3 +1,41 @@
+/*api key*/
+/*.gm-style-iw {
+  background: $black;
+  box-shadow: -14px 0px 0px $black, -14px 9px 0px $black, -14px -8px 0px $black, 15px -8px 0px $black, 15px 9px 0px $black;
+}
+.gm-style-iw {
+ 
+  &::before {
+    content: '';
+    width: calc(100% + 29px);
+    height: calc(100% + 17px);
+    @include absolute;
+    @include center-align;
+    background: $black;
+  }
+  
+  
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-top-color: $black;
+    z-index: 4;
+    @include absolute;
+    top: auto;
+    bottom: -53px;
+    margin: auto;
+  }
+}
+.gm-style-mtc > div,
+.gmnoprint > div,
+.gm-svpc {
+  background-color: #f63981 !important;
+}*/
+
+/**/
+
 .block{
     background-color: #ebedec;
 
@@ -6,6 +44,7 @@
     height: 565px;
     max-width: 100%;
     text-align: center;
+    background-color: #ebedec;
 }
 .pic{
     font-size: 100px;
@@ -31,6 +70,8 @@
     border-radius: 10px;
     text-decoration: none;
     color: #333;
+    cursor: pointer;
+    margin-top: 30px;
 }
 .big a:hover{
     text-decoration:none; 
@@ -45,7 +86,18 @@
     width: 100%;
     height: 40px;
 }
-
+.inpu {
+    border: none;
+    background-color: #ebedec;
+    padding: 5px 18px;
+    border-radius: 10px;
+    height: 38px;
+    cursor: pointer;
+}
+.mood div{
+    float: left;
+    margin: 0 3px;
+}
 #room {
     text-align: center;
     margin: 10px;
@@ -61,16 +113,69 @@
     background-color: #ebedec;
     padding: 5px 15px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: -8px 0;
     width: 100%;
     height: 41px;
 }
 .number{
     border: none;
     background-color: #ebedec;
-    border-radius:17px;
-    
+    border-radius:10px;
+    padding: 5px ;
+    width: 50px;
+    height: 38px;
+    text-align: center;
+    cursor: pointer;
 }
+.fonts{
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+/*drag and drop*/
+
+#drop-area {
+  border-radius: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+#drop-area.highlight {
+  border-color: purple;
+}
+
+.my-form {
+  margin-bottom: 10px;
+}
+#gallery {
+  margin-top: 10px;
+}
+#gallery img {
+  width: 160px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  float: left;
+}
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.button:hover {
+  background: #ddd;
+}
+#fileElem {
+  display: none;
+}
+progress{
+    opacity: 0;
+}
+/**/
+
+
 /* DEMO 1 */
 
 .wrapper-dropdown-1 {
@@ -101,6 +206,7 @@
     left: 0;
     right: 0;
     text-align: left;
+    padding-left: 0;
     /* Styles */
     background: #f7f7f7;
     border-radius: inherit;
