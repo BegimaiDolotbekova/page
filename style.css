@@ -568,12 +568,11 @@ progress{
  }
 
 .modalDialog > div {
-    max-width: 1350px;
-    height: 607px;
+    max-width: 1090px;
+    height: 650px;
     position: relative;
-    margin: 50px auto;
-    text-align: center;
-    
+    margin-left: 120px;
+    padding-left: 30px;
     background: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
